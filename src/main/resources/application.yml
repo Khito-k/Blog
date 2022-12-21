@@ -10,7 +10,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/site?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=yes&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=yes&characterEncoding=utf8
     username: 
     password: 
     hikari:
@@ -30,25 +30,13 @@ spring:
       connection-test-query: SELECT 1
   # redis配置
   redis:
-    host: localhost
+    host: 
     port: 6379
 
-  # mq配置
-  #  rabbitmq:
-  #    host:
-  #    port:
-  #    username:
-  #    password:
-  #    listener:
-  #      simple:
-  #        retry:
-  #          enabled: true
-  #          max-attempts: 3 #最大重试次数
-  #          initial-interval: 3000 #重试间隔时间（单位毫秒）
   # es配置 若搜索模式为mysql可删除
   elasticsearch:
     rest:
-      uris: localhost:9200
+      uris: 
   # 邮箱配置
   mail:
     host: 
@@ -77,11 +65,11 @@ mybatis-plus:
 
 # 搜索模式 可选 elasticsearch或mysql
 search:
-  mode: mysql
+  mode: elasticsearch
 
 # 上传模式 可选 oss或local  （http://和最后的/一定不能去！！！）
 upload:
-  mode: oss
+  mode: local
   local:
     # nginx映射本地文件路径，无域名则为 ip:83
     url:
@@ -93,27 +81,7 @@ upload:
     accessKeyId: 
     accessKeySecret:
     bucketName:
-#  cos:
-#    url:
-#    secretId:
-#    secretKey:
-#    region:
-#    bucketName:
 
 # 网站前台域名（邮件通知用）
 website:
-  url: http://localhost:8081/
-
-#第三方配置信息
-#qq:
-#  app-id:
-#  check-token-url:
-#  user-info-url:
-
-#weibo:
-#  app-id:
-#  app-secret:
-#  grant-type:
-#  redirect-url:
-#  access-token-url:
-#  user-info-url:
+  url: 
