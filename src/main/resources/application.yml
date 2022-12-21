@@ -11,8 +11,8 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/site?serverTimezone=Asia/Shanghai&allowMultiQueries=true&useUnicode=yes&characterEncoding=utf8
-    username: root
-    password: bzk
+    username: 
+    password: 
     hikari:
       minimum-idle: 5
       # 空闲连接存活最大时间，默认600000（10分钟）
@@ -51,13 +51,13 @@ spring:
       uris: localhost:9200
   # 邮箱配置
   mail:
-    host: smtp.qq.com
-    username: 454867387@qq.com
-    password: whmamkmmsvaocacb
+    host: 
+    username: 
+    password: 
     default-encoding: UTF-8
-    port: 587
+    port: 
     properties:
-      mail: 454867387@qq.com
+      mail:
       smtp:
       auth: true
       socketFactory:
@@ -84,15 +84,15 @@ upload:
   mode: oss
   local:
     # nginx映射本地文件路径，无域名则为 ip:83
-    url: http://83:8080/
+    url:
     # 本地文件存储路径
     path: /usr/local/upload/
   oss:
-    url: http://khito.oss-cn-shenzhen.aliyuncs.com/
-    endpoint: oss-cn-shenzhen.aliyuncs.com
-    accessKeyId: LTAI5tNWjxMiWphjyv64YxCv
-    accessKeySecret: 1fM0YVEZQXRzdcIgQs9peQZrVYDGCb
-    bucketName: khito
+    url: 
+    endpoint: 
+    accessKeyId: 
+    accessKeySecret:
+    bucketName:
 #  cos:
 #    url:
 #    secretId:
